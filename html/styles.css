@@ -4,13 +4,11 @@ body {
     padding: 0;
 }
 
-/* Fejléc stílusai */
 header {
     background-color: #333;
     color: #fff;
     display: flex;
     align-items: center;
-    /* A justify-content-ot a média lekérdezésben módosítjuk */
     padding: 0 20px;
     height: 100px;
     position: relative;
@@ -27,25 +25,21 @@ header::after {
     right: 0;
 }
 
-/* Logó konténer */
 .logo-container {
     display: flex;
     align-items: center;
     height: 100%;
 }
 
-/* Képes logó */
 .logo {
     height: 100%;
     margin-right: 20px;
 }
 
-/* Szöveges logó (alapértelmezetten rejtett) */
 .logo-text {
     display: none;
 }
 
-/* Navigációs sáv */
 nav {
     flex-grow: 1;
     position: absolute;
@@ -81,17 +75,13 @@ nav ul li a:hover {
     color: #ffffff;
 }
 
-/* Az aktív fül ne legyen félkövér */
 nav ul li.active a {
-    /* font-weight: bold; */
 }
 
-/* Az aktív pont eltávolítása */
 nav ul li.active::after {
     content: '';
 }
 
-/* Fő tartalom */
 main {
     padding: 20px;
 }
@@ -100,7 +90,6 @@ section {
     margin-bottom: 20px;
 }
 
-/* Lábléc */
 footer {
     background-color: #333;
     color: #fff;
@@ -108,44 +97,36 @@ footer {
     padding: 10px 0;
 }
 
-/* Reszponzív navigációs menü */
-/* Menü kapcsoló elrejtése */
 #menu-toggle {
     display: none;
 }
 
-/* Menü ikon stílusai */
 .menu-icon {
     display: none;
     font-size: 1.8em;
     color: #fff;
     cursor: pointer;
     position: absolute;
-    /* Áthelyezzük a bal oldalra */
     left: 20px;
     top: 30px;
 }
 
-/* Média lekérdezés 1300px-nél kisebb képernyőkhöz */
 @media screen and (max-width: 1279px) {
-    /* Fejléc igazítása */
     header {
         justify-content: space-between;
     }
-    
-    /* Navigációs sáv módosítása */
+
     nav {
         position: static;
         transform: none;
         left: 0;
     }
 
-    /* Navigációs lista módosítása */
     nav ul {
         flex-direction: column;
         background-color: #333;
         position: absolute;
-        top: 100px; /* Fejléc magassága */
+        top: 100px; 
         left: 0;
         width: 100%;
         display: none;
@@ -162,17 +143,14 @@ footer {
         border-bottom: 1px solid #444;
     }
 
-    /* Menü megjelenítése a menü ikonra kattintva */
     #menu-toggle:checked + .menu-icon + nav ul {
         display: flex;
     }
 
-    /* Menü ikon megjelenítése */
     .menu-icon {
         display: block;
     }
 
-    /* Képes logó elrejtése, szöveges logó megjelenítése */
     .logo {
         display: none;
     }
@@ -190,7 +168,6 @@ footer {
         width: 100%;
     }
 
-    /* Logó méretének módosítása (ha szükséges) */
     .logo {
         height: 80px;
     }
