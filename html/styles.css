@@ -1,8 +1,11 @@
-/* Alapértelmezett stílusok */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-image: url('paintshop.jpg'); /* A háttérkép elérési útja */
+    background-size: cover; /* A háttérkép teljesen kitölti a képernyőt */
+    background-position: center; /* A háttérkép középre igazítása */
+    background-attachment: fixed; /* A háttérkép nem görög, ha az oldal lefelé görgetve van */
 }
 
 header {
@@ -86,11 +89,25 @@ nav ul li.active a {
     position: absolute;
     top: 20px;
     right: 20px;
-    height: 60px;
+    height: 85px; /* Az ikon magasságának beállítása */
+    width: 85px; /* Az ikon szélességének beállítása */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cart-icon img {
-    height: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 40 px;
+    font-size: 40px; /* Ha Font Awesome ikont használsz, akkor a méretet itt állíthatod be */
+    color: white; /* Az ikon színe */
+    transition: color 0.3s ease;
+}
+
+.cart-icon:hover i {
+    color: #FF9735; /* Az ikon színe, ha fölé viszik az egeret */
 }
 
 main {
@@ -99,6 +116,62 @@ main {
 
 section {
     margin-bottom: 20px;
+}
+
+/* Elérhetőségek táblázata */
+#contact-info table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#contact-info th, #contact-info td {
+    padding: 10px;
+    text-align: left;
+    font-size: 1.3em; /* Nagyobb betűméret */
+    border: 1px solid #ddd;
+}
+
+#contact-info th {
+    background-color: #FF9735;
+    color: white;
+}
+
+#contact-info td {
+    background-color: #f9f9f9;
+}
+
+#opening-hours {
+    background: rgba(255, 255, 255, 0.8); /* Átlátszó fehér háttér */
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto; /* Középre igazítja a táblázatot */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Roboto', sans-serif; /* Szép betűtípus */
+}
+
+#opening-hours table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.5em; /* Nagyobb betűméret */
+}
+
+#opening-hours th, #opening-hours td {
+    padding: 12px;
+    text-align: left;
+    font-size: 1.2em; /* Nagyobb betűméret */
+    color: #333; /* Sötét szín a betűknek, hogy jól látszódjanak */
+}
+
+#opening-hours th {
+    background-color: #FF9735; /* Kiemelt háttér a fejlécnek */
+    color: white;
+}
+
+#opening-hours tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 
 /* Rács a festékek megjelenítéséhez */
@@ -255,4 +328,18 @@ section {
     nav ul li {
         margin: 0 20px; /* Növelhetjük a menüpontok közötti távolságot */
     }
+}
+
+/* Kép középre igazítása és szélesség növelése */
+#image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Kép szakasz magasságának növelése, ha szükséges */
+}
+
+.main-image {
+    width: 100%; /* A kép szélességét 100%-ra állítjuk */
+    height: auto; /* Magasság automatikusan igazodik a szélességhez */
+    max-width: 120
 }
