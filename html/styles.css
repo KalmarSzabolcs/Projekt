@@ -3,9 +3,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-  }
-  
-  header {
+}
+
+header {
     background-color: #333;
     color: #fff;
     display: flex;
@@ -14,9 +14,9 @@ body {
     height: 100px;
     position: relative;
     justify-content: space-between;
-  }
-  
-  header::after {
+}
+
+header::after {
     content: '';
     display: block;
     height: 5px;
@@ -25,127 +25,124 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-  }
-  
-  .logo-container {
+}
+
+.logo-container {
     display: flex;
     align-items: center;
     height: 100%;
-  }
-  
-  .logo {
+}
+
+.logo {
     height: 100%;
     margin-right: 20px;
-  }
-  
-  .logo-text {
+}
+
+.logo-text {
     display: none;
-  }
-  
-  nav {
+}
+
+nav {
     flex-grow: 1;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1; 
-  }
-  
-  nav ul {
+    z-index: 1;
+}
+
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-  }
-  
-  nav ul li {
+}
+
+nav ul li {
     margin: 0 10px;
     position: relative;
-  }
-  
-  nav ul li a {
+}
+
+nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1.2em;
     padding: 10px 20px;
     border-radius: 20px;
     transition: background-color 0.3s ease;
-  }
-  
-  nav ul li a:hover {
+}
+
+nav ul li a:hover {
     background-color: #FF9735;
     color: #ffffff;
-  }
-  
-  nav ul li.active a {
+}
+
+nav ul li.active a {
     background-color: #FF9735;
     color: #ffffff;
-  }
-  
-  .cart-icon {
+}
+
+.cart-icon {
     position: absolute;
     top: 20px;
     right: 20px;
     height: 60px;
-  }
-  
-  .cart-icon img {
+}
+
+.cart-icon img {
     height: 100%;
-  }
-  
-  main {
+}
+
+main {
     padding: 20px;
-  }
-  
-  section {
+}
+
+section {
     margin-bottom: 20px;
-  }
-  
-  /* Rács a festékek megjelenítéséhez */
-  .paint-container {
+}
+
+/* Rács a festékek megjelenítéséhez */
+.paint-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-top: 20px;
-  }
-  
-  /* Egy festék elem két oszlopos belső elrendezése */
-  .paint-item {
+}
+
+.paint-item {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     overflow: hidden;
-  }
-  
-  .paint-image {
-    width: 50%;
-  }
-  
-  .paint-image img {
+    transition: transform 0.3s ease;
+}
+
+.paint-item:hover {
+    transform: scale(1.05);
+}
+
+.paint-image img {
     width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  .paint-info {
-    width: 50%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.paint-info {
     padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .paint-info h3 {
-    margin: 0 0 10px;
-  }
-  
-  .paint-info p {
+}
+
+.paint-info h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.paint-info p {
     margin: 5px 0;
-  }
-  
-  .paint-info button {
+}
+
+.paint-info button {
     background-color: #FF9735;
     color: #fff;
     border: none;
@@ -153,99 +150,32 @@ body {
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .paint-info button:hover {
+}
+
+.paint-info button:hover {
     background-color: #e68929;
-  }
-  
-  footer {
-    background-color: #333;
-    color: #fff;
+}
+
+/* Rejtett festékek */
+.paint-item.hidden {
+    display: none;
+}
+
+/* Lapozás gombok */
+#pagination {
+    margin-top: 20px;
     text-align: center;
-    padding: 10px 0;
-  }
-  
-  
-  /* Responsive beállítások */
-  @media screen and (max-width: 1279px) {
-    header {
-      justify-content: space-between;
-    }
-  
-    nav {
-      position: static;
-      transform: none;
-      left: 0;
-    }
-  
-    nav ul {
-      flex-direction: column;
-      background-color: #333;
-      position: absolute;
-      top: 100px;
-      left: 0;
-      width: 100%;
-      display: none;
-    }
-  
-    nav ul li {
-      margin: 0;
-      text-align: center;
-    }
-  
-    nav ul li a {
-      display: block;
-      padding: 15px;
-      border-bottom: 1px solid #444;
-    }
-  
-    #menu-toggle:checked + .menu-icon + nav ul {
-      display: flex;
-    }
-  
-    .menu-icon {
-      display: block;
-    }
-  
-    .logo {
-      display: none;
-    }
-  
-    .logo-text {
-      display: block;
-      font-size: 1.8em;
-      color: #fff;
-      text-align: center;
-      flex-grow: 1;
-    }
-  
-    .logo-container {
-      justify-content: center;
-      width: 100%;
-    }
-  
-    .logo {
-      height: 80px;
-    }
-  
-    /* A festék rács módosítása: kisebb képernyőn 2 oszlop */
-    .paint-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    
-    /* Sőt, minden egyes festék elem belső elrendezését is
-       oszlop helyett egymás alá rendezhetjük */
-    .paint-item {
-      flex-direction: column;
-    }
-    
-    .paint-image, .paint-info {
-      width: 100%;
-    }
-    
-    .paint-image img {
-      border-radius: 10px 10px 0 0;
-    }
-  }
-  
+}
+
+#show-more {
+    background-color: #FF9735;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#show-more:hover {
+    background-color: #e68929;
+}
