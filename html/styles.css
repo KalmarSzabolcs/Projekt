@@ -179,3 +179,80 @@ section {
 #show-more:hover {
     background-color: #e68929;
 }
+
+/* Hamburger menü és mobil nézet */
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px; /* A menü ikon a jobb oldalra kerül */
+    top: 30px; /* Kisebb margót adunk a felső részhez */
+}
+
+/* Mobil nézet */
+@media screen and (max-width: 1279px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .logo-text {
+        display: none; /* Mobil nézetben elrejtjük a szöveget */
+    }
+
+    nav {
+        display: none; /* Elrejtjük a menüt alapértelmezésben */
+        width: 100%;
+        position: absolute;
+        top: 100px; /* Fejléc alatt jelenik meg */
+        left: 0;
+        background-color: #333;
+    }
+
+    nav ul {
+        flex-direction: column;
+        background-color: #333;
+    }
+
+    nav ul li {
+        margin: 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 15px;
+        border-bottom: 1px solid #444;
+    }
+
+    #menu-toggle:checked + .menu-icon + nav {
+        display: block; /* Ha be van jelölve, megjelenítjük a menüt */
+    }
+
+    .menu-icon {
+        display: block; /* A hamburger menü ikon csak kis képernyőn jelenik meg */
+    }
+}
+
+/* Nagyobb nézetben a fejléc és menü nem tűnik el */
+@media screen and (min-width: 1280px) {
+    .menu-icon {
+        display: none; /* Az asztali nézetben nem jelenik meg a hamburger menü ikon */
+    }
+
+    nav {
+        display: flex; /* Nagyobb képernyőn mindig látható a menü */
+    }
+
+    nav ul {
+        flex-direction: row; /* Nagy képernyőn vízszintes menü */
+    }
+
+    nav ul li {
+        margin: 0 20px; /* Növelhetjük a menüpontok közötti távolságot */
+    }
+}
