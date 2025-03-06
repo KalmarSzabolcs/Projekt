@@ -6,6 +6,7 @@ body {
     background-size: cover; /* A háttérkép teljesen kitölti a képernyőt */
     background-position: center; /* A háttérkép középre igazítása */
     background-attachment: fixed; /* A háttérkép nem görög, ha az oldal lefelé görgetve van */
+    color: #fff; /* Fehér betűszín az egész oldalhoz */
 }
 
 header {
@@ -67,7 +68,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #fff; /* Fehér szín a menüpontokhoz */
     text-decoration: none;
     font-size: 1.2em;
     padding: 10px 20px;
@@ -89,8 +90,8 @@ nav ul li.active a {
     position: absolute;
     top: 20px;
     right: 20px;
-    height: 85px; /* Az ikon magasságának beállítása */
-    width: 85px; /* Az ikon szélességének beállítása */
+    height: 85px;
+    width: 85px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,18 +101,19 @@ nav ul li.active a {
     max-width: 100%;
     height: auto;
     object-fit: contain;
-    max-height: 40 px;
-    font-size: 40px; /* Ha Font Awesome ikont használsz, akkor a méretet itt állíthatod be */
-    color: white; /* Az ikon színe */
+    max-height: 40px;
+    font-size: 40px;
+    color: white;
     transition: color 0.3s ease;
 }
 
 .cart-icon:hover i {
-    color: #FF9735; /* Az ikon színe, ha fölé viszik az egeret */
+    color: #FF9735;
 }
 
 main {
     padding: 20px;
+    color: #fff; /* Fehér betűszín a fő tartalomhoz */
 }
 
 section {
@@ -139,34 +141,36 @@ section {
 
 #contact-info td {
     background-color: #f9f9f9;
+    color: #333; /* A táblázat szövege legyen sötétebb */
 }
 
 #opening-hours {
-    background: rgba(255, 255, 255, 0.8); /* Átlátszó fehér háttér */
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     padding: 20px;
     width: 80%;
-    margin: 0 auto; /* Középre igazítja a táblázatot */
+    margin: 0 auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    font-family: 'Roboto', sans-serif; /* Szép betűtípus */
+    font-family: 'Roboto', sans-serif;
+    color: #333; /* Sötét szín a táblázat szövegeihez */
 }
 
 #opening-hours table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 1.5em; /* Nagyobb betűméret */
+    font-size: 1.5em;
 }
 
 #opening-hours th, #opening-hours td {
     padding: 12px;
     text-align: left;
-    font-size: 1.2em; /* Nagyobb betűméret */
-    color: #333; /* Sötét szín a betűknek, hogy jól látszódjanak */
+    font-size: 1.2em;
+    color: #333; /* Táblázat szövege legyen sötét színű */
 }
 
 #opening-hours th {
-    background-color: #FF9735; /* Kiemelt háttér a fejlécnek */
+    background-color: #FF9735;
     color: white;
 }
 
@@ -229,12 +233,10 @@ section {
     background-color: #e68929;
 }
 
-/* Rejtett festékek */
 .paint-item.hidden {
     display: none;
 }
 
-/* Lapozás gombok */
 #pagination {
     margin-top: 20px;
     text-align: center;
@@ -253,7 +255,6 @@ section {
     background-color: #e68929;
 }
 
-/* Hamburger menü és mobil nézet */
 #menu-toggle {
     display: none;
 }
@@ -263,25 +264,24 @@ section {
     font-size: 30px;
     cursor: pointer;
     position: absolute;
-    right: 20px; /* A menü ikon a jobb oldalra kerül */
-    top: 30px; /* Kisebb margót adunk a felső részhez */
+    right: 20px;
+    top: 30px;
 }
 
-/* Mobil nézet */
 @media screen and (max-width: 1279px) {
     header {
         justify-content: space-between;
     }
 
     .logo-text {
-        display: none; /* Mobil nézetben elrejtjük a szöveget */
+        display: none;
     }
 
     nav {
-        display: none; /* Elrejtjük a menüt alapértelmezésben */
+        display: none;
         width: 100%;
         position: absolute;
-        top: 100px; /* Fejléc alatt jelenik meg */
+        top: 100px;
         left: 0;
         background-color: #333;
     }
@@ -303,43 +303,41 @@ section {
     }
 
     #menu-toggle:checked + .menu-icon + nav {
-        display: block; /* Ha be van jelölve, megjelenítjük a menüt */
+        display: block;
     }
 
     .menu-icon {
-        display: block; /* A hamburger menü ikon csak kis képernyőn jelenik meg */
+        display: block;
     }
 }
 
-/* Nagyobb nézetben a fejléc és menü nem tűnik el */
 @media screen and (min-width: 1280px) {
     .menu-icon {
-        display: none; /* Az asztali nézetben nem jelenik meg a hamburger menü ikon */
+        display: none;
     }
 
     nav {
-        display: flex; /* Nagyobb képernyőn mindig látható a menü */
+        display: flex;
     }
 
     nav ul {
-        flex-direction: row; /* Nagy képernyőn vízszintes menü */
+        flex-direction: row;
     }
 
     nav ul li {
-        margin: 0 20px; /* Növelhetjük a menüpontok közötti távolságot */
+        margin: 0 20px;
     }
 }
 
-/* Kép középre igazítása és szélesség növelése */
 #image-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px; /* Kép szakasz magasságának növelése, ha szükséges */
+    height: 300px;
 }
 
 .main-image {
-    width: 100%; /* A kép szélességét 100%-ra állítjuk */
-    height: auto; /* Magasság automatikusan igazodik a szélességhez */
-    max-width: 120
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
 }
