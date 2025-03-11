@@ -1,124 +1,82 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faanyagok</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faanyagok</title>
+  <!-- ugyanaz a Google Fonts link, ha szükséges (pl. Oswald betűtípus) -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="szinfabarkacs.png" alt="SzínFa Barkács Logo" class="logo">
-            <span class="logo-text">SzínFa Barkács</span>
+  <header>
+    <div class="logo-container">
+      <img src="szinfabarkacs.png" alt="SzínFa Barkács Logo" class="logo">
+      <span class="logo-text">SzínFa Barkács</span>
+    </div>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <nav>
+      <ul>
+        <li><a href="index.html">Főoldal</a></li>
+        <li><a href="paint.html">Festékek</a></li>
+        <li class="active"><a href="wood.html">Faanyagok</a></li>
+        <li><a href="about.html">Rólunk</a></li>
+      </ul>
+    </nav>
+    <!-- Kosár ikon eltávolítva, ahogy a paint.html esetében is -->
+  </header>
+  <main>
+    <section id="wood">
+      <!-- A "Faanyagok" felirat megjelenik középen a #wood h2 szabály szerint -->
+      <h2>Faanyagok</h2>
+      <div class="paint-container">
+        <!-- Első faanyag termék – Fenyőfa -->
+        <div class="paint-item">
+          <div class="paint-image">
+            <!-- Példakép: fenyo.png -->
+            <img src="Borovi_001.jpg" alt="Fenyőfa">
+          </div>
+          <div class="paint-info">
+            <h3>Fenyőfa</h3>
+            <p>Természetes fenyőfa anyag – ideális beltéri bútorokhoz és burkolatokhoz.</p>
+            <p>Ár: 5.000 Ft</p>
+            <button>Kosárba</button>
+          </div>
         </div>
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">&#9776;</label>
-        <nav>
-            <ul>
-                <li><a href="index.html">Főoldal</a></li>
-                <li><a href="paint.html">Festékek</a></li>
-                <li class="active"><a href="wood.html">Faanyagok</a></li>
-                <li><a href="about.html">Rólunk</a></li>
-            </ul>
-        </nav>
-        <div class="cart-icon">
-            <img src="paint-removebg-preview.png" alt="Kosár">
+        <!-- Második faanyag termék – Tölgyfa -->
+        <div class="paint-item">
+          <div class="paint-image">
+            <!-- Példakép: tolgy.png -->
+            <img src="250px-Tölgyfa_hosszmetszete (1).jpg" alt="Tölgyfa">
+          </div>
+          <div class="paint-info">
+            <h3>Tölgyfa</h3>
+            <p>Kiváló minőségű tölgyfa, tartós és elegáns választás.</p>
+            <p>Ár: 7.000 Ft</p>
+            <button>Kosárba</button>
+          </div>
         </div>
-    </header>
-    <main>
-        <section id="wood">
-            <h2>Faanyagok</h2>
-            <p>Itt találhatsz információkat faanyagainkról.</p>
-            <div class="container">
-                <h1>Faanyagok és Jellemzőik</h1>
-        
-                <div class="fa-container">
-                    <div class="fa-item">
-                        <img src="250px-Tölgyfa_hosszmetszete (1).jpg" alt="Tölgy fa">
-                        <div class="fa-text">
-                            <h3>Tölgy (Quercus robur)</h3>
-                            <p><strong>Rönkhossz:</strong> 4–6 m (de előfordulhat hosszabb is)</p>
-                            <p><strong>Rönkátmérő:</strong> 40–80 cm</p>
-                            <p><strong>Sűrűség:</strong> 700–800 kg/m³ (szárított)</p>
-                            <p><strong>Zsugorodás:</strong> Radikális: 8–9%, Tangenciális: 14–15%</p>
-                            <p><strong>Nyomó szilárdság:</strong> 40–50 N/mm²</p>
-                            <p><strong>Hajlítószilárdság:</strong> 90–120 N/mm²</p>
-                            <p><strong>Fagyállóság:</strong> Jó, alkalmas kültéri használatra (pl. kerti bútorok)</p>
-                            <p><strong>Jellemzők:</strong> Erős, sűrű faanyag, mely nagyon ellenálló a mechanikai igénybevételekkel szemben.</p>
-                        </div>
-                    </div>
-        
-                    <div class="fa-item">
-                        <img src="Borovi_001.jpg" alt="Fenyő fa">
-                        <div class="fa-text">
-                            <h3>Fenyő (Pinus sylvestris)</h3>
-                            <p><strong>Rönkhossz:</strong> 4–12 m</p>
-                            <p><strong>Rönkátmérő:</strong> 30–70 cm</p>
-                            <p><strong>Sűrűség:</strong> 450–550 kg/m³ (szárított)</p>
-                            <p><strong>Zsugorodás:</strong> Radikális: 5–6%, Tangenciális: 10–12%</p>
-                            <p><strong>Nyomó szilárdság:</strong> 30–35 N/mm²</p>
-                            <p><strong>Hajlítószilárdság:</strong> 75–90 N/mm²</p>
-                            <p><strong>Fagyállóság:</strong> Korlátozott, nem igazán kültéri használatra, ha nincs megfelelő védőkezelés.</p>
-                            <p><strong>Jellemzők:</strong> Kiváló árat és könnyű megmunkálhatóságot biztosít, ezért építőipari felhasználásra ideális.</p>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="fa-container">
-                    <div class="fa-item">
-                        <img src="images.jfif" alt="Juhar fa">
-                        <div class="fa-text">
-                            <h3>Juhar (Acer platanoides)</h3>
-                            <p><strong>Rönkhossz:</strong> 3–6 m</p>
-                            <p><strong>Rönkátmérő:</strong> 30–50 cm</p>
-                            <p><strong>Sűrűség:</strong> 650–750 kg/m³ (szárított)</p>
-                            <p><strong>Zsugorodás:</strong> Radikális: 5–7%, Tangenciális: 9–10%</p>
-                            <p><strong>Nyomó szilárdság:</strong> 45–55 N/mm²</p>
-                            <p><strong>Hajlítószilárdság:</strong> 80–110 N/mm²</p>
-                            <p><strong>Fagyállóság:</strong> Kiváló, jól alkalmazható kültéri és beltéri használatra is.</p>
-                            <p><strong>Jellemzők:</strong> Sűrű, kemény és szép textúrájú faanyag, különösen bútoriparban használt.</p>
-                        </div>
-                    </div>
-        
-                    <div class="fa-item">
-                        <img src="Cseresznye_001.jpg" alt="Cseresznye fa">
-                        <div class="fa-text">
-                            <h3>Cseresznye (Prunus avium)</h3>
-                            <p><strong>Rönkhossz:</strong> 4–6 m</p>
-                            <p><strong>Rönkátmérő:</strong> 30–60 cm</p>
-                            <p><strong>Sűrűség:</strong> 600–700 kg/m³ (szárított)</p>
-                            <p><strong>Zsugorodás:</strong> Radikális: 6–7%, Tangenciális: 10–12%</p>
-                            <p><strong>Nyomó szilárdság:</strong> 35–40 N/mm²</p>
-                            <p><strong>Hajlítószilárdság:</strong> 80–100 N/mm²</p>
-                            <p><strong>Fagyállóság:</strong> Korlátozott, kültéri használatra csak megfelelő impregnálás után ajánlott.</p>
-                            <p><strong>Jellemzők:</strong> Szép, gazdag színű és sima textúrájú fa, főleg belső terekhez ajánlott.</p>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="fa-container">
-                    <div class="fa-item">
-                        <img src="Akácfa_hosszmetszete.jpg" alt="Akác fa">
-                        <div class="fa-text">
-                            <h3>Akác (Robinia pseudoacacia)</h3>
-                            <p><strong>Rönkhossz:</strong> 4–8 m</p>
-                            <p><strong>Rönkátmérő:</strong> 30–50 cm</p>
-                            <p><strong>Sűrűség:</strong> 750–850 kg/m³ (szárított)</p>
-                            <p><strong>Zsugorodás:</strong> Radikális: 7–8%, Tangenciális: 12–14%</p>
-                            <p><strong>Nyomó szilárdság:</strong> 50–60 N/mm²</p>
-                            <p><strong>Hajlítószilárdság:</strong> 120–150 N/mm²</p>
-                            <p><strong>Fagyállóság:</strong> Kiváló, rendkívül ellenálló faanyag, mely kültéri használatra is ideális.</p>
-                            <p><strong>Jellemzők:</strong> Rendkívül tartós és kemény faanyag, jól ellenáll az időjárásnak és rovaroknak. És nagyon népszerű.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 SzínFa Barkács. Minden jog fenntartva.</p>
-    </footer>
-    <script src="scripts.js"></script>
+        <!-- Harmadik faanyag termék – Cseresznyefa -->
+        <div class="paint-item">
+          <div class="paint-image">
+            <!-- Példakép: cseresznye.png -->
+            <img src="Cseresznye_001.jpg" alt="Cseresznyefa">
+          </div>
+          <div class="paint-info">
+            <h3>Cseresznyefa</h3>
+            <p>Luxus minőségű cseresznyefa – ideális elegáns berendezésekhez.</p>
+            <p>Ár: 8.500 Ft</p>
+            <button>Kosárba</button>
+          </div>
+        </div>
+        <!-- További faanyag termékek is elhelyezhetők hasonló szerkezetben -->
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 SzínFa Barkács. Minden jog fenntartva.</p>
+  </footer>
+  <script src="scripts.js"></script>
 </body>
 </html>
