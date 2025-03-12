@@ -1,37 +1,142 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Festékek</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Festékek</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="szinfabarkacs.png" alt="SzínFa Barkács Logo" class="logo">
-            <span class="logo-text">SzínFa Barkács</span>
+  <header>
+    <div class="logo-container">
+      <img src="szinfabarkacs.png" alt="SzínFa Barkács Logo" class="logo">
+      <span class="logo-text">SzínFa Barkács</span>
+    </div>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <nav>
+      <ul>
+        <li><a href="index.html">Főoldal</a></li>
+        <li class="active"><a href="paint.html">Festékek</a></li>
+        <li><a href="wood.html">Faanyagok</a></li>
+        <li><a href="about.html">Rólunk</a></li>
+      </ul>
+    </nav>
+    <div class="cart-icon">
+      <img src="cart.png" alt="Kosár">
+    </div>
+  </header>
+  <main>
+    <section id="paint">
+      <h2>Festékek</h2>
+      <p>Itt találhatsz információkat festékeinkről.</p>
+      <div class="paint-container">
+        <div class="paint-item">
+          <div class="paint-image">
+            <img src="paint1.jpg" alt="Festék 1">
+          </div>
+          <div class="paint-info">
+            <h3>Festék 1</h3>
+            <p>Rövid leírás a festékről.</p>
+            <p>Ár: 2000 Ft</p>
+            <button>Kosárba</button>
+          </div>
         </div>
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">&#9776;</label>
-        <nav>
-            <ul>
-                <li><a href="index.html">Főoldal</a></li>
-                <li class="active"><a href="paint.html">Festékek</a></li>
-                <li><a href="wood.html">Faanyagok</a></li>
-                <li><a href="about.html">Rólunk</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="paint">
-            <h2>Festékek</h2>
-            <p>Itt találhatsz információkat festékeinkről.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 SzínFa Barkács. Minden jog fenntartva.</p>
-    </footer>
-    <script src="scripts.js"></script>
+        <div class="paint-item">
+          <div class="paint-image">
+            <img src="paint2.jpg" alt="Festék 2">
+          </div>
+          <div class="paint-info">
+            <h3>Festék 2</h3>
+            <p>Rövid leírás a festékről.</p>
+            <p>Ár: 2500 Ft</p>
+            <button>Kosárba</button>
+          </div>
+        </div>
+        <div class="paint-item">
+          <div class="paint-image">
+            <img src="paint3.jpg" alt="Festék 3">
+          </div>
+          <div class="paint-info">
+            <h3>Festék 3</h3>
+            <p>Rövid leírás a festékről.</p>
+            <p>Ár: 3000 Ft</p>
+            <button>Kosárba</button>
+          </div>
+        </div>
+        <!-- Új festékek hozzáadása -->
+        <div class="paint-item">
+          <div class="paint-image">
+            <img src="paint4.jpg" alt="Festék 4">
+          </div>
+          <div class="paint-info">
+            <h3>Festék 4</h3>
+            <p>Rövid leírás a festékről.</p>
+            <p>Ár: 3500 Ft</p>
+            <button>Kosárba</button>
+          </div>
+        </div>
+        <div class="paint-item">
+          <div class="paint-image">
+            <img src="paint5.jpg" alt="Festék 5">
+          </div>
+          <div class="paint-info">
+            <h3>Festék 5</h3>
+            <p>Rövid leírás a festékről.</p>
+            <p>Ár: 4000 Ft</p>
+            <button>Kosárba</button>
+          </div>
+        </div>
+        <div class="paint-item">
+          <div class="paint-image">
+            <img src="paint6.jpg" alt="Festék 6">
+          </div>
+          <div class="paint-info">
+            <h3>Festék 6</h3>
+            <p>Rövid leírás a festékről.</p>
+            <p>Ár: 4500 Ft</p>
+            <button>Kosárba</button>
+          </div>
+        </div>
+        <div class="paint-item">
+          <div class="paint-image">
+            <img src="paint7.jpg" alt="Festék 7">
+          </div>
+          <div class="paint-info">
+            <h3>Festék 7</h3>
+            <p>Rövid leírás a festékről.</p>
+            <p>Ár: 5000 Ft</p>
+            <button>Kosárba</button>
+          </div>
+        </div>
+        <div class="paint-item">
+          <div class="paint-image">
+            <img src="paint8.jpg" alt="Festék 8">
+          </div>
+          <div class="paint-info">
+            <h3>Festék 8</h3>
+            <p>Rövid leírás a festékről.</p>
+            <p>Ár: 5500 Ft</p>
+            <button>Kosárba</button>
+          </div>
+        </div>
+        <div class="paint-item">
+          <div class="paint-image">
+            <img src="paint9.jpg" alt="Festék 9">
+          </div>
+          <div class="paint-info">
+            <h3>Festék 9</h3>
+            <p>Rövid leírás a festékről.</p>
+            <p>Ár: 6000 Ft</p>
+            <button>Kosárba</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 SzínFa Barkács. Minden jog fenntartva.</p>
+  </footer>
+  <script src="scripts.js"></script>
 </body>
 </html>
