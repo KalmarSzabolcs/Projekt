@@ -4,7 +4,6 @@ body {
     padding: 0;
 }
 
-/* Weboldal háttér: hatter.png blur effekttel */
 body::before {
     content: "";
     position: fixed;
@@ -18,7 +17,6 @@ body::before {
     z-index: -1;
 }
 
-/* Fejléc stílusai */
 header {
     background-color: #333;
     color: #fff;
@@ -40,25 +38,22 @@ header::after {
     right: 0;
 }
 
-/* Logó konténer */
 .logo-container {
     display: flex;
     align-items: center;
     height: 100%;
 }
 
-/* Képes logó */
 .logo {
     height: 100%;
     margin-right: 20px;
 }
 
-/* Szöveges logó (alapértelmezetten rejtett) */
+
 .logo-text {
     display: none;
 }
 
-/* Navigációs sáv */
 nav {
     flex-grow: 1;
     position: absolute;
@@ -94,17 +89,13 @@ nav ul li a:hover {
     color: #ffffff;
 }
 
-/* Az aktív fül ne legyen félkövér */
 nav ul li.active a {
-    /* font-weight: bold; */
 }
 
-/* Az aktív pont eltávolítása */
 nav ul li.active::after {
     content: '';
 }
 
-/* Fő tartalom */
 main {
     padding: 20px;
 }
@@ -113,6 +104,7 @@ section {
     margin-bottom: 20px;
 }
 
+<<<<<<< HEAD
 /* Elérhetőségek szekció stílusai */
 #contact-info {
     margin-top: 50px;
@@ -169,6 +161,8 @@ section {
 }
 
 /* Lábléc */
+=======
+>>>>>>> 8d0e3f925e786de5a20c0005fdfdfcf367618213
 footer {
     background-color: #333;
     color: #fff;
@@ -176,7 +170,10 @@ footer {
     padding: 10px 0;
 }
 
+<<<<<<< HEAD
 /* Reszponzív navigációs menü */
+=======
+>>>>>>> 8d0e3f925e786de5a20c0005fdfdfcf367618213
 #menu-toggle {
     display: none;
 }
@@ -253,9 +250,6 @@ footer {
     }
 }
 
-/* --- Új stílusok a festékek oldalon (termékelrendezés) --- */
-
-/* A festék termékeket tartalmazó konténer */
 .paint-container {
     display: flex;
     flex-wrap: wrap;
@@ -264,7 +258,6 @@ footer {
     justify-content: center;
 }
 
-/* Egy festék termék elem – két részre osztva: a kép és a mellette lévő infó box */
 .paint-item {
     display: flex;
     align-items: flex-start;
@@ -273,13 +266,11 @@ footer {
     box-sizing: border-box;
 }
 
-/* A festék kép blokkja */
 .paint-image {
     flex: 0 0 auto;
     width: 250px;
     height: 250px;
     overflow: hidden;
-    /* Bal oldali sarkok lekerekítése 10px-re */
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     margin-right: 0;
@@ -292,7 +283,6 @@ footer {
     display: block;
 }
 
-/* Az infó doboz, amely mellette jelenik meg – ugyanolyan széles és magas, mint a kép */
 .paint-info {
     flex: 0 0 auto;
     width: 250px;
@@ -301,7 +291,6 @@ footer {
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.7);
     border: none;
-    /* Jobb oldali sarkok lekerekítése 10px-re, a bal oldali sima */
     border-radius: 0 10px 10px 0;
     display: flex;
     flex-direction: column;
