@@ -113,6 +113,61 @@ section {
     margin-bottom: 20px;
 }
 
+/* Elérhetőségek szekció stílusai */
+#contact-info {
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-column {
+    flex: 1 1 200px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-column h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+    border-bottom: 2px solid #FF9735;
+    padding-bottom: 5px;
+}
+
+.contact-column ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-column ul li {
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* Táblagép- és mobilnézet */
+@media screen and (max-width: 768px) {
+    .contact-columns {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
 /* Lábléc */
 footer {
     background-color: #333;
@@ -122,12 +177,10 @@ footer {
 }
 
 /* Reszponzív navigációs menü */
-/* Menü kapcsoló elrejtése */
 #menu-toggle {
     display: none;
 }
 
-/* Menü ikon stílusai */
 .menu-icon {
     display: none;
     font-size: 1.8em;
@@ -138,7 +191,6 @@ footer {
     top: 30px;
 }
 
-/* Média lekérdezés 1300px-nél kisebb képernyőkhöz */
 @media screen and (max-width: 1300px) {
     header {
         justify-content: space-between;
