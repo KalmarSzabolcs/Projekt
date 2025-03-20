@@ -17,6 +17,19 @@ body::before {
     z-index: -1;
 }
 
+body.wood-page::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('Fa.jpg') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(8px);
+    z-index: -1;
+}
+
 header {
     background-color: #333;
     color: #fff;
@@ -49,7 +62,6 @@ header::after {
     margin-right: 20px;
 }
 
-
 .logo-text {
     display: none;
 }
@@ -59,7 +71,7 @@ nav {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1; 
+    z-index: 1;
 }
 
 nav ul {
@@ -80,12 +92,12 @@ nav ul li a {
     text-decoration: none;
     font-size: 1.2em;
     padding: 10px 20px;
-    border-radius: 20px; 
-    transition: background-color 0.3s ease; 
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #FF9735; 
+    background-color: #FF9735;
     color: #ffffff;
 }
 
@@ -104,7 +116,6 @@ section {
     margin-bottom: 20px;
 }
 
-<<<<<<< HEAD
 /* Elérhetőségek szekció stílusai */
 #contact-info {
     margin-top: 50px;
@@ -137,6 +148,7 @@ section {
     color: #333;
     border-bottom: 2px solid #FF9735;
     padding-bottom: 5px;
+    cursor: pointer;
 }
 
 .contact-column ul {
@@ -152,6 +164,21 @@ section {
     line-height: 1.5;
 }
 
+/* Alapértelmezett állapotban a tartalom rejtve marad */
+.contact-content {
+    display: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Aktív állapotban megjelenik a tartalom */
+.contact-column h3.active + .contact-content {
+    display: block;
+}
+
 /* Táblagép- és mobilnézet */
 @media screen and (max-width: 768px) {
     .contact-columns {
@@ -161,8 +188,6 @@ section {
 }
 
 /* Lábléc */
-=======
->>>>>>> 8d0e3f925e786de5a20c0005fdfdfcf367618213
 footer {
     background-color: #333;
     color: #fff;
@@ -170,10 +195,7 @@ footer {
     padding: 10px 0;
 }
 
-<<<<<<< HEAD
 /* Reszponzív navigációs menü */
-=======
->>>>>>> 8d0e3f925e786de5a20c0005fdfdfcf367618213
 #menu-toggle {
     display: none;
 }
@@ -192,13 +214,13 @@ footer {
     header {
         justify-content: space-between;
     }
-    
+
     nav {
         position: static;
         transform: none;
         left: 0;
     }
-    
+
     nav ul {
         flex-direction: column;
         background-color: #333;
@@ -208,30 +230,30 @@ footer {
         width: 100%;
         display: none;
     }
-    
+
     nav ul li {
         margin: 0;
         text-align: center;
     }
-    
+
     nav ul li a {
         display: block;
         padding: 15px;
         border-bottom: 1px solid #444;
     }
-    
+
     #menu-toggle:checked + .menu-icon + nav ul {
         display: flex;
     }
-    
+
     .menu-icon {
         display: block;
     }
-    
+
     .logo {
         display: none;
     }
-    
+
     .logo-text {
         display: block;
         font-size: 1.8em;
@@ -239,12 +261,12 @@ footer {
         text-align: center;
         flex-grow: 1;
     }
-    
+
     .logo-container {
         justify-content: center;
         width: 100%;
     }
-    
+
     .logo {
         height: 80px;
     }
@@ -329,4 +351,10 @@ footer {
     color: #fff;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
     margin-bottom: 20px;
+}
+
+/* Interakciók hozzáadása: ha rákattintanak egy címre, a tartalom megjelenik */
+.contact-column h3.active {
+    background-color: #FF9735;
+    color: #fff;
 }
