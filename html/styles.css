@@ -420,24 +420,35 @@
     /* Csapat boxok középre helyezése és egymás mellé állítása */
     .team-container {
         display: flex;
-        justify-content: center; /* Boxok középre helyezése */
-        gap: 20px; /* Távolság a boxok között */
-        flex-wrap: nowrap; /* Boxok egymás mellett maradnak */
-
-        height: 600px;
+        justify-content: space-between; /* Alapból a szélekre igazítja a boxokat */
+        gap: 20px;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
     }
-
-    /* Boxok magasságának növelése */
+    
     .team-member {
-        width: 300px; /* Marad az eddigi szélesség */
-        height: 600 px; /* Magasság megnövelése */
+        width: 500px;
+        height: 600px;
         text-align: center;
-        padding: 20px; /* Némi extra belső tér */
+        padding: 20px;
     }
+    
+    .center-box {
+        margin: 0 auto; /* A középső boxot középre helyezi */
+    }
+    
+    
+    
+    .right-box {
+        margin-left: auto; /* A jobb oldali boxot jobbra tolja */
+    }
+    
+    
 
     /* A kép méretének módosítása a megnövelt boxokhoz igazítva */
     .team-member .team-image {
-        height: 200px; /* Növelés, hogy jobban kitöltse a boxot */
+        height: 350px; /* Növelés, hogy jobban kitöltse a boxot */
         object-fit: cover; /* A kép arányos igazítása */
     }
 
@@ -453,5 +464,18 @@
         font-size: 1.2em; /* Kicsivel nagyobb szövegméret */
         line-height: 1.5; /* Jobb olvashatóság */
     }
+    .cart-icon {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 100px; /* Átméretezés, ha szükséges */
+        height: 100px;
+    }
+    
+    .cart-icon img {
+        width: 100%;
+        height: auto;
+    }
+    
 
 
