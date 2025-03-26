@@ -415,3 +415,43 @@
             align-items: center;  /* A táblázatok középre igazítása mobilon */
         }
     }
+    /* Az eredeti CSS kód az eredeti sorrendben maradt */
+
+    /* Csapat boxok középre helyezése és egymás mellé állítása */
+    .team-container {
+        display: flex;
+        justify-content: center; /* Boxok középre helyezése */
+        gap: 20px; /* Távolság a boxok között */
+        flex-wrap: nowrap; /* Boxok egymás mellett maradnak */
+
+        height: 600px;
+    }
+
+    /* Boxok magasságának növelése */
+    .team-member {
+        width: 300px; /* Marad az eddigi szélesség */
+        height: 600 px; /* Magasság megnövelése */
+        text-align: center;
+        padding: 20px; /* Némi extra belső tér */
+    }
+
+    /* A kép méretének módosítása a megnövelt boxokhoz igazítva */
+    .team-member .team-image {
+        height: 200px; /* Növelés, hogy jobban kitöltse a boxot */
+        object-fit: cover; /* A kép arányos igazítása */
+    }
+
+    /* Szöveg pozícionálása és elosztása */
+    .team-member h3 {
+        margin-top: 20px; /* Több hely a szövegnek */
+        font-size: 1.5em;
+        color: #333;
+    }
+
+    .team-member p {
+        margin-top: 15px; /* Kényelmes távolság */
+        font-size: 1.2em; /* Kicsivel nagyobb szövegméret */
+        line-height: 1.5; /* Jobb olvashatóság */
+    }
+
+
