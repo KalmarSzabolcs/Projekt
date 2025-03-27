@@ -496,6 +496,134 @@
         width: 100%;
         height: auto;
     }
+        #opening-hours {
+            margin-top: 30px;
+            width: 100%;
+            border-collapse: collapse;
+            border: 2px solid #FF9735; /* Kiemelkedő keret a táblázat körül */
+            background-color: #f9f9f9; /* Háttérszín, hogy kiemelkedjen */
+        }
+        
+        #opening-hours th, #opening-hours td {
+            border: 1px solid #ddd; /* Finom szegélyek */
+            padding: 15px; /* Tágasabb cellák */
+            text-align: center;
+            font-size: 1.1em; /* Kisebb betűméret, hogy könnyebb legyen olvasni */
+        }
+        
+        #opening-hours th {
+            background-color: #FF9735; /* Fejléc háttérszíne */
+            color: white; /* Fehér szöveg */
+            font-weight: bold;
+            font-size: 3em; /* Kiemelt szöveg a fejléchez */
+        }
+        
+        #opening-hours td {
+            color: #333; /* Sötétebb szöveg a cellákban */
+            background-color: #fff; /* Fehér háttér minden cellához */
+        }
+        
+        #opening-hours tr:nth-child(even) td {
+            background-color: #f2f2f2; /* Minden páros sor más háttérszín */
+        }
+        
+        #opening-hours tr:hover {
+            background-color: #FF9735; /* Hover effekt a sorokon */
+            color: white; /* Fehér szöveg a hovered sorokban */
+        }
+        
+        #opening-hours th, #opening-hours td {
+            transition: background-color 0.3s, color 0.3s; /* Zökkenőmentes színváltás */
+        }
+    
+    
+/* A 4 opció az oldal aljára rögzítve */
+.footer-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: white;
+    padding: 20px 50px;
+    z-index: 1000;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.footer-option {
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    border-right: 1px solid #444;
+}
+
+.footer-option:last-child {
+    border-right: none;
+}
+
+/* Lenýíló menü stílus */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    bottom: -100px; /* A menü rejtve marad alapértelmezetten */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.footer-option:hover .dropdown-content {
+    display: block;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    resize: vertical;
+}
+
+button {
+    background-color: #FF9735;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e0822a;
+}
+
+/* Ha az oldal kisebb képernyővel rendelkezik (mobil nézet) */
+@media screen and (max-width: 768px) {
+    .footer-options {
+        flex-direction: column;
+    }
+
+    .footer-option {
+        border-right: none;
+        margin-bottom: 10px;
+    }
+
+    .footer-option:last-child {
+        margin-bottom: 0;
+    }
+}
+
+    
     
 
 
